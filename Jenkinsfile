@@ -9,14 +9,22 @@ pipeline {
         TENANT_NAME = "WELEAF"
     }
     stages {
+
         stage('Prepare') {
             steps {
                 sh 'git clean -xffd'
-                sh "echo 'Test' "
                 sh "git clone git@github.com:vlumy/flutter-app.git"
                 sh "cd flutter-app && git checkout deploy"
                 sh "cp install/key.properties flutter-app"
             }
         }
+
+
+        stage('Build bundle') {
+            steps {
+                sh "cd flutter-app && flutter pub get && flutter pub run flutter_launcher_icons && flutter packages pub run build_runner build --delete-conflicting-outputs && flutter build appbundle && flutter build apk"
+            }
+        }
+
     }
 }
