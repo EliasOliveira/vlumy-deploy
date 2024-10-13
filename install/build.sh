@@ -8,3 +8,5 @@ $FLUTTER packages pub run build_runner build --delete-conflicting-outputs && \
 $FLUTTER build appbundle && \
 $FLUTTER build apk
 
+cd ..
+cd flutter-app\build\app\outputs\bundle\release\app-release.aab .\install
