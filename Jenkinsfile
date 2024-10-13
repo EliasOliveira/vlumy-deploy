@@ -15,7 +15,7 @@ pipeline {
                 sh 'git clean -xffd'
                 sh "git clone git@github.com:vlumy/flutter-app.git"
                 sh "cd flutter-app && git checkout deploy"
-                sh "cp install/key.properties flutter-app"
+                sh "cp install/key.properties flutter-app/android"
             }
         }
 
