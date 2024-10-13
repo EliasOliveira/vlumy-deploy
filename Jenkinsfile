@@ -26,5 +26,9 @@ pipeline {
             }
         }
 
+        stage('Upload to Play Store') {
+            androidApkUpload googleCredentialsId: 'vlumy-mais-app-a9b16f8e86f4', apkFilesPattern: '**/*-release.apk', trackName: 'production'
+         }
+
     }
 }
