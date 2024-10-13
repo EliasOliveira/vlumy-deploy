@@ -45,7 +45,7 @@ pipeline {
                 expression { params.TARGET_STORE == 'android' }
             }}
             steps {
-                androidApkUpload googleCredentialsId: 'vlumy-mais-app-a9b16f8e86f4', apkFilesPattern: '**/*-release.apk', trackName: 'production' rolloutPercentage: '0'
+                androidApkUpload googleCredentialsId: 'vlumy-mais-app-a9b16f8e86f4', apkFilesPattern: '**/*-release.apk', trackName: 'production', rolloutPercentage: '0'
             }
         }
 
