@@ -21,11 +21,11 @@ pipeline {
         }
 
 
-        stage('Build bundle') {
-            steps {
-                //sh "cd flutter-app && flutter pub get && flutter pub run flutter_launcher_icons && flutter packages pub run build_runner build --delete-conflicting-outputs && flutter build appbundle && flutter build apk"
-            }
-        }
+//         stage('Build bundle') {
+//             steps {
+//                 //sh "cd flutter-app && flutter pub get && flutter pub run flutter_launcher_icons && flutter packages pub run build_runner build --delete-conflicting-outputs && flutter build appbundle && flutter build apk"
+//             }
+//         }
 
     }
 }
