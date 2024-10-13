@@ -21,9 +21,21 @@ pipeline {
         }
 
 
-        stage('Build bundle') {
+        stage('Build Android') {
+            when { allOf {
+                expression { params.TARGET_STORE == 'android' }
+            }}
             steps {
                 sh "sh install/build.sh"
+            }
+        }
+
+        stage('Build IOS') {
+            when { allOf {
+                expression { params.TARGET_STORE == 'ios' }
+            }}
+            steps {
+                sh "sh install/build-ios.sh"
             }
         }
 
