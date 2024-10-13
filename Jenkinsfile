@@ -12,7 +12,7 @@ pipeline {
 
         stage('Prepare') {
             steps {
-                sh "flutter --version"
+                sh "sh install/build.sh"
 //                 sh 'git clean -xffd'
 //                 sh "git clone git@github.com:vlumy/flutter-app.git"
 //                 sh "cd flutter-app && git checkout deploy"
