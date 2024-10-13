@@ -1,5 +1,6 @@
-FLUTTER="~/Documents/development/flutter/bin//flutter"
+FLUTTER="~/Documents/development/flutter/bin/flutter"
 
+ls $FLUTTER
 $FLUTTER --version
 
 
