@@ -8,9 +8,7 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '3', artifactNumToKeepStr: '3'))
     }
-    environment {
 
-    }
     stages {
 
         stage('Prepare') {
